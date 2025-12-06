@@ -409,11 +409,12 @@
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-project="softvet">
                     <div class="project-image">
-                        <img src="img/project1.jpg" alt="Sistema Administrativo SoftVet">
+                        <img src="img/softvet1.png" alt="Sistema Administrativo SoftVet">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" onclick="openProjectModal('softvet'); return false;"><i
+                                    class="fas fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -421,18 +422,19 @@
                         <p>Sistema de gestión administrativa para veterinarias. Ganador del 1er Puesto en XXIII Concurso
                             de Proyectos EPIS 2023-II</p>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">MySQL</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">.NET Framework</span>
+                            <span class="tag">SQL Server</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-project="america">
                     <div class="project-image">
-                        <img src="img/project2.jpg" alt="Gestión de Pedidos con IA">
+                        <img src="img/america1.png" alt="Gestión de Pedidos con IA">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" onclick="openProjectModal('america'); return false;"><i
+                                    class="fas fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -440,18 +442,19 @@
                         <p>Sistema de gestión de pedidos con IA generativa de imágenes para Imprenta América. 2do Puesto
                             XXV Concurso EPIS 2024-II</p>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
                             <span class="tag">IA</span>
-                            <span class="tag">Django</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-project="bomberos">
                     <div class="project-image">
-                        <img src="img/project3.jpg" alt="Sistema RPA para Admisiones">
+                        <img src="img/bomberos1.png" alt="Sistema RPA para Admisiones">
                         <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" onclick="openProjectModal('bomberos'); return false;"><i
+                                    class="fas fa-eye"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -459,9 +462,9 @@
                         <p>Sistema web con RPA para gestión de admisiones en CGBV del Perú. 2do Puesto XXVII Concurso
                             EPIS 2025-II</p>
                         <div class="project-tags">
-                            <span class="tag">RPA</span>
-                            <span class="tag">Power Automate</span>
                             <span class="tag">PHP</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Power Automate</span>
                         </div>
                     </div>
                 </div>
@@ -642,6 +645,42 @@
             </div>
         </div>
     </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content-wrapper">
+                <!-- Left Side: Image Carousel -->
+                <div class="modal-left">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-images" id="carouselImages">
+                            <!-- Images will be loaded dynamically -->
+                        </div>
+                        <button class="carousel-btn next" onclick="changeSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <!-- Indicators will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Project Description -->
+                <div class="modal-right">
+                    <div class="modal-project-info" id="modalProjectInfo">
+                        <!-- Project info will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
